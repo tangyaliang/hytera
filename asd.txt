@@ -1,0 +1,99 @@
+﻿-- Create table
+create table T_RIP_APPLICATION
+(
+  id                          VARCHAR2(20) not null,
+  user_name                   VARCHAR2(20) not null,
+  project_name                VARCHAR2(200) not null,
+  require_type                VARCHAR2(3),
+  industry                    VARCHAR2(3),
+  country                     VARCHAR2(30) not null,
+  type_number                 VARCHAR2(50) not null,
+  vesion                      VARCHAR2(10),
+  demand_product_quantity     NUMBER not null,
+  competitors                 VARCHAR2(500) not null,
+  requirement_description     VARCHAR2(500) not null,
+  instructions                VARCHAR2(500),
+  demand_application_scenario VARCHAR2(500) not null,
+  market_capacity             VARCHAR2(500) not null,
+  time_node                   DATE,
+  delivery_time               DATE,
+  priority                    VARCHAR2(3) not null,
+  rdelivery_time              DATE,
+  proposed_planning_version   VARCHAR2(10),
+  actual_time_for_delivery    DATE,
+  process_stauts              VARCHAR2(50),
+  pro_inst_id                 VARCHAR2(20) not null,
+  url                         VARCHAR2(200) not null,
+  str1                        VARCHAR2(200),
+  str2                        VARCHAR2(200),
+  str3                        VARCHAR2(200),
+  str4                        VARCHAR2(200),
+  create_time                 DATE,
+  last_update_time            DATE
+)
+tablespace USERS
+  pctfree 10
+  initrans 1
+  maxtrans 255;
+-- Add comments to the table 
+comment on table T_RIP_APPLICATION
+  is '需求导入流程数据接收表';
+-- Add comments to the columns 
+comment on column T_RIP_APPLICATION.id
+  is '主键id';
+comment on column T_RIP_APPLICATION.user_name
+  is '用户域账号id';
+comment on column T_RIP_APPLICATION.project_name
+  is '项目名称';
+comment on column T_RIP_APPLICATION.require_type
+  is '需求类型 lookup';
+comment on column T_RIP_APPLICATION.industry
+  is '行业  lookup';
+comment on column T_RIP_APPLICATION.country
+  is '国家';
+comment on column T_RIP_APPLICATION.type_number
+  is '需求涉及产品/工具型号和频段';
+comment on column T_RIP_APPLICATION.vesion
+  is '版本';
+comment on column T_RIP_APPLICATION.demand_product_quantity
+  is '需求数量';
+comment on column T_RIP_APPLICATION.competitors
+  is '竞争对手情况';
+comment on column T_RIP_APPLICATION.requirement_description
+  is '需求描述';
+comment on column T_RIP_APPLICATION.instructions
+  is '项目和客户背景说明';
+comment on column T_RIP_APPLICATION.demand_application_scenario
+  is '需求应用场景';
+comment on column T_RIP_APPLICATION.market_capacity
+  is '市场容量';
+comment on column T_RIP_APPLICATION.time_node
+  is '演示/测试时间节点';
+comment on column T_RIP_APPLICATION.delivery_time
+  is '交付时间节点';
+comment on column T_RIP_APPLICATION.priority
+  is '优先级';
+comment on column T_RIP_APPLICATION.rdelivery_time
+  is '建议定制交付时间';
+comment on column T_RIP_APPLICATION.proposed_planning_version
+  is '建议规划版本';
+comment on column T_RIP_APPLICATION.actual_time_for_delivery
+  is '实际交付时间';
+comment on column T_RIP_APPLICATION.process_stauts
+  is '流程当前所在节点';
+comment on column T_RIP_APPLICATION.pro_inst_id
+  is '流程实例id';
+comment on column T_RIP_APPLICATION.url
+  is '电子流链接';
+comment on column T_RIP_APPLICATION.str1
+  is '预留字段1';
+comment on column T_RIP_APPLICATION.str2
+  is '预留字段2';
+comment on column T_RIP_APPLICATION.str3
+  is '预留字段3';
+comment on column T_RIP_APPLICATION.str4
+  is '预留字段4';
+comment on column T_RIP_APPLICATION.create_time
+  is '创建时间';
+comment on column T_RIP_APPLICATION.last_update_time
+  is '最后更新时间';
